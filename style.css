@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    height: 100%;
+    overflow: hidden; 
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.container-start {
+    border: 8px solid #ffae70;
+    outline: 4px solid;
+    border-radius: 100%;
+}
+
+.base-start {
+    background-color: #75221c;
+    outline: 2px solid black;
+    position: relative; 
+    border-radius: 100%;
+}
+
+.button-start {
+    border-radius: 100%;
+    font-size: 32px;
+    outline: 2px solid black;
+    border: 4px solid;
+    border-left-color: #e7b8b4;
+    border-top-color: #f8c9c5;
+    border-bottom-color: #4e1814;
+    border-right-color: #79241e;
+    background-color: #e64539;
+    cursor: pointer;
+    color: #ffee83;
+    padding: 20px 30px;
+    transform: translateY(-20%);
+}
+
+.button-start:active {
+    transform: translateY(0); 
+}
+
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.load {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    font-size: 6em;
+    color: red;
+    text-shadow: 0 0 20px orange, 0 0 40px yellow, 0 0 60px red;
+    animation: flicker 0.1s infinite alternate;
+    transition: transform 1s ease;
+    z-index: 999;
+}
+
+.win,
+.lose {
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    font-size: 6em;
+    color: red;
+    text-shadow: 0 0 20px orange, 0 0 40px yellow, 0 0 60px red;
+    animation: flicker 0.1s infinite alternate;
+    transition: transform 1s ease;
+    z-index: 999;
+}
+
+.button-border {
+    border: 8px solid #ffae70;
+    outline: 4px solid;
+    border-radius: 100px;
+    position: absolute;
+    top: 33%;
+    left: 10px;
+    z-index: 5;
+    width: 8.8rem;
+}
+
+.button-base {
+    background-color: #75221c;
+    outline: 2px solid black;
+    position: relative; 
+    border-radius: 100px;
+    width: 100%;
+}
+
+.button {
+    border-radius: 100px;
+    font-size: 1.2em;
+    font-family: "Press Start 2P", cursive;
+    outline: 2px solid black;
+    border: 4px solid;
+    border-left-color: #e7b8b4;
+    border-top-color: #f8c9c5;
+    border-bottom-color: #4e1814;
+    border-right-color: #79241e;
+    background-color: #e64539;
+    cursor: pointer;
+    color: #ffee83;
+    padding: 10px 10px;
+    transform: translateY(-20%);
+    user-select: none;
+}
+
+.button:active {
+    transform: translateY(0); 
+}
+
+.button-border2 {
+    border: 8px solid #ffae70;
+    outline: 4px solid;
+    border-radius: 100px;
+    position: absolute;
+    top: 48%;
+    left: 10px;
+    z-index: 5;
+    width: 8.8rem;
+}
+
+.button-base2 {
+    background-color: #75221c;
+    outline: 2px solid black;
+    position: relative; 
+    border-radius: 100px;
+    width: 100%;
+}
+
+.button2 {
+    border-radius: 100px;
+    font-size: 1.2em;
+    width: 100%;
+    font-family: "Press Start 2P", cursive;
+    outline: 2px solid black;
+    border: 4px solid;
+    border-left-color: #e7b8b4;
+    border-top-color: #f8c9c5;
+    border-bottom-color: #4e1814;
+    border-right-color: #79241e;
+    background-color: #e64539;
+    cursor: pointer;
+    color: #ffee83;
+    padding: 10px 10px;
+    transform: translateY(-20%);
+    user-select: none;
+}
+
+.button2:active {
+    transform: translateY(0); 
+}
+
+.button-border3 {
+    border: 8px solid #ffae70;
+    outline: 4px solid;
+    border-radius: 100px;
+    position: absolute;
+    top: 63%;
+    left: 10px;
+    z-index: 5;
+    width: 8.8rem;
+}
+
+.button-base3 {
+    background-color: #75221c;
+    outline: 2px solid black;
+    position: relative; 
+    border-radius: 100px;
+    width: 100%;
+}
+
+.button3 {
+    border-radius: 100px;
+    font-size: 1.2em;
+    width: 100%;
+    font-family: "Press Start 2P", cursive;
+    outline: 2px solid black;
+    border: 4px solid;
+    border-left-color: #e7b8b4;
+    border-top-color: #f8c9c5;
+    border-bottom-color: #4e1814;
+    border-right-color: #79241e;
+    background-color: #e64539;
+    cursor: pointer;
+    color: #ffee83;
+    padding: 10px 10px;
+    transform: translateY(-20%);
+    user-select: none;
+}
+
+.button3:active {
+    transform: translateY(0); 
+}
+
+.drop {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: rgba(173, 216, 230, 0.6); 
+    animation: fall 10s linear infinite forwards;
+}
+
+.tek {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.fog {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; 
+    z-index: 1;
+}
+
+.bar-vie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+}
+
+.vs {
+    color: #fff;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.gauche {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gauche .avatar {
+    width: 100px;
+}
+
+.gauche .eclair {
+    position: absolute;
+    width: 300px;
+    transform: rotate(-90deg);
+    z-index: -2;
+    animation: eclair 15s linear infinite;
+}
+
+.bar-vie-spider {
+    width: 30rem;
+    height: 7vh;
+    border: 10px groove rgb(41, 28, 19);
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    padding: 2px 9px;
+    box-shadow: 
+        0 0 10px rgba(255, 165, 0, 0.8),
+        0 0 20px rgba(255, 69, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.8);
+    animation: flame 0.1s infinite alternate;
+}
+
+.inter-bar-spider {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(212, 195, 11), rgb(230, 95, 5) 70%);
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    display: flex;
+    align-items: center;
+    transition: width 0.5s ease;
+}
+
+.bar-vie-spider > p {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.droit {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.droit .avatar {
+    width: 100px;
+}
+
+.droit .eclair {
+    position: absolute;
+    right: 5%;
+    width: 300px;
+    transform: rotate(90deg);
+    z-index: -2;
+    animation: eclair 15s linear infinite;
+}
+
+.bar-vie-iron {
+    width: 30rem;
+    height: 7vh;
+    border: 10px groove rgb(41, 28, 19);
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    padding: 2px 9px;
+    box-shadow: 
+        0 0 10px rgba(255, 165, 0, 0.8),
+        0 0 20px rgba(255, 69, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.8);
+    animation: flame 0.1s infinite alternate;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inter-bar-iron {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(212, 195, 11), rgb(230, 95, 5) 70%);
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: width 0.5s ease;
+}
+
+.droit p {
+    color: #fff;
+    position: absolute;
+    top: 75%;
+    right: 14%;
+    font-size: 1.2em;
+    font-weight: bold;  
+}
+
+.spider-perso {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    z-index: 5;
+    width: 500px;
+}
+
+.gifPied {
+    position: absolute;
+    opacity: 0;
+    width: 600px;
+    top: 14%;
+    left: 12%;
+    z-index: 5;
+}
+
+.gifPoing {
+    position: absolute;
+    opacity: 0;
+    width: 510px;
+    top: 15%;
+    left: 12%;
+    z-index: 5;
+}
+
+.gifToile {
+    position: absolute;
+    opacity: 0;
+    width: 970px;
+    top: 15%;
+    left: 8%;
+    z-index: 5;
+}
+
+.coup1 {
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    z-index: 10;
+    width: 250px;
+    display: none;
+}
+
+.iron-perso {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    z-index: 5;
+    width: 410px;
+}
+
+.coup2 {
+    position: absolute;
+    top: 8%;
+    left: 83%;
+    z-index: 10;
+    width: 250px;
+    display: none;
+}
+
+.ironPoing {
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+    left: 53%;
+    display: none;
+}
+
+.ironPied {
+    position: absolute;
+    z-index: 3;
+    top: 16%;
+    left: 54%;
+    display: none;
+}
+
+.ironToile {
+    position: absolute;
+    z-index: 3;
+    top: 25%;
+    left: 54%;
+    display: none;
+}
+
+.replay {
+    position: absolute;
+    top: 93%;
+    left: 90%;
+    background: #e64539;
+    color: #fff;
+    padding: 0.6em 1.3em;
+    font-weight: bold;
+    font-size: 1em;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.replay:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+@keyframes flame {
+    0% {
+        box-shadow: 
+            0 0 30px rgba(255, 165, 0, 0.9),
+            0 0 50px rgba(255, 69, 0, 0.9),
+            0 0 70px rgba(255, 0, 0, 0.9);
+    }
+    100% {
+        box-shadow: 
+            0 0 20px rgba(255, 165, 0, 0.7),
+            0 0 40px rgba(255, 69, 0, 0.7),
+            0 0 60px rgba(255, 0, 0, 0.7);
+    }
+}
+
+@keyframes eclair {
+    0% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(70px);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh); 
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .load, .win, .lose {
+        font-size: 4em;
+        left: 20%;
+    }
+
+    .button-border,
+    .button-border2,
+    .button-border3 {
+        width: 7rem;
+        left: 5px;
+    }
+
+    .button,
+    .button2,
+    .button3 {
+        font-size: 1em;
+        padding: 8px 8px;
+    }
+
+    .button-border { top: 35%; }
+    .button-border2 { top: 50%; }
+    .button-border3 { top: 65%; }
+
+    .bar-vie {
+        padding: 1% 2%;
+    }
+
+    .vs { 
+        font-size: 3em; 
+    }
+
+    .gauche .avatar,
+    .droit .avatar { 
+        width: 70px; 
+    }
+
+    .gauche .eclair,
+    .droit .eclair { 
+        width: 200px; 
+    }
+
+    .bar-vie-spider,
+    .bar-vie-iron {
+        width: 20rem;
+        height: 6vh;
+        border: 8px groove rgb(41, 28, 19);
+    }
+
+    .bar-vie-spider > p,
+    .droit p { 
+        font-size: 1em; 
+    }
+
+    .droit p {
+        right: 10%;
+    }
+
+    .spider-perso { 
+        width: 350px; 
+        top: 25%; 
+        left: 8%; 
+    }
+
+    .gifPied { 
+        width: 420px; 
+        top: 19%; 
+        left: 8%; 
+    }
+
+    .gifPoing { 
+        width: 360px; 
+        top: 20%; 
+        left: 8%; 
+    }
+
+    .gifToile { 
+        width: 680px; 
+        top: 20%; 
+        left: 5%; 
+    }
+
+    .coup1 { 
+        width: 180px; 
+        top: 10%; 
+        left: 1%; 
+    }
+
+    .iron-perso { 
+        width: 290px; 
+        top: 35%; 
+        left: 58%; 
+    }
+
+    .coup2 { 
+        width: 180px; 
+        top: 10%; 
+        left: 80%; 
+    }
+
+    .ironPoing { 
+        top: 25%; 
+        left: 56%; 
+    }
+
+    .ironPied { 
+        top: 21%; 
+        left: 57%; 
+    }
+
+    .ironToile { 
+        top: 30%; 
+        left: 57%; 
+    }
+
+    .replay {
+        top: 91%;
+        left: 87%;
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .start {
+        font-size: 18px;
+    }
+
+    .button-start {
+        font-size: 24px;
+        padding: 15px 20px;
+    }
+
+    .load, .win, .lose {
+        font-size: 2.5em;
+        left: 10%;
+        top: 40%;
+    }
+
+    .button-border,
+    .button-border2,
+    .button-border3 {
+        width: 5.5rem;
+        left: 5px;
+        border: 6px solid #ffae70;
+        outline: 3px solid;
+    }
+
+    .button,
+    .button2,
+    .button3 {
+        font-size: 0.7em;
+        padding: 6px 6px;
+        border: 3px solid;
+    }
+
+    .button-border { top: 38%; }
+    .button-border2 { top: 52%; }
+    .button-border3 { top: 66%; }
+
+    .bar-vie {
+        flex-direction: column;
+        gap: 10px;
+        padding: 2% 2%;
+    }
+
+    .vs { 
+        font-size: 2em;
+        order: 2;
+    }
+
+    .gauche {
+        order: 1;
+    }
+
+    .gauche .avatar { 
+        width: 50px; 
+    }
+
+    .gauche .eclair { 
+        width: 150px; 
+    }
+
+    .bar-vie-spider {
+        width: 100%;
+        max-width: 300px;
+        height: 5vh;
+        border: 6px groove rgb(41, 28, 19);
+    }
+
+    .bar-vie-spider > p { 
+        font-size: 0.8em; 
+        margin-top: 10px; 
+    }
+
+    .droit {
+        order: 3;
+    }
+
+    .droit .avatar { 
+        width: 50px; 
+    }
+
+    .droit .eclair { 
+        width: 150px; 
+        right: 2%; 
+    }
+
+    .bar-vie-iron {
+        width: 100%;
+        max-width: 300px;
+        height: 5vh;
+        border: 6px groove rgb(41, 28, 19);
+    }
+
+    .droit p {
+        font-size: 0.8em;
+        top: 70%;
+        right: 8%;
+    }
+
+    .spider-perso { 
+        width: 220px; 
+        top: 28%; 
+        left: 5%; 
+    }
+
+    .gifPied { 
+        width: 270px; 
+        top: 22%; 
+        left: 5%; 
+    }
+
+    .gifPoing { 
+        width: 230px; 
+        top: 23%; 
+        left: 5%; 
+    }
+
+    .gifToile { 
+        width: 430px; 
+        top: 23%; 
+        left: 2%; 
+    }
+
+    .coup1 { 
+        width: 120px; 
+        top: 12%; 
+        left: 0%; 
+    }
+
+    .iron-perso { 
+        width: 180px; 
+        top: 38%; 
+        left: 60%; 
+    }
+
+    .coup2 { 
+        width: 120px; 
+        top: 12%; 
+        left: 75%; 
+    }
+
+    .ironPoing { 
+        top: 28%; 
+        left: 58%; 
+    }
+
+    .ironPied { 
+        top: 24%; 
+        left: 59%; 
+    }
+
+    .ironToile { 
+        top: 33%; 
+        left: 59%; 
+    }
+
+    .replay {
+        top: 90%;
+        left: 82%;
+        font-size: 0.7em;
+        padding: 0.4em 0.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .start {
+        font-size: 14px;
+    }
+
+    .button-start {
+        font-size: 18px;
+        padding: 12px 16px;
+    }
+
+    .load, .win, .lose {
+        font-size: 1.8em;
+        left: 5%;
+        top: 35%;
+    }
+
+    .button-border,
+    .button-border2,
+    .button-border3 {
+        width: 4.5rem;
+        left: 3px;
+        border: 4px solid #ffae70;
+        outline: 2px solid;
+    }
+
+    .button,
+    .button2,
+    .button3 {
+        font-size: 0.55em;
+        padding: 5px 5px;
+        border: 2px solid;
+    }
+
+    .button-border { top: 40%; }
+    .button-border2 { top: 53%; }
+    .button-border3 { top: 66%; }
+
+    .bar-vie {
+        gap: 5px;
+    }
+
+    .vs { 
+        font-size: 1.5em; 
+    }
+
+    .gauche .avatar { 
+        width: 40px; 
+    }
+
+    .gauche .eclair { 
+        width: 100px; 
+    }
+
+    .bar-vie-spider {
+        max-width: 200px;
+        height: 4vh;
+        border: 4px groove rgb(41, 28, 19);
+        padding: 1px 5px;
+    }
+
+    .bar-vie-spider > p { 
+        font-size: 0.6em; 
+        margin-top: 8px; 
+    }
+
+    .droit .avatar { 
+        width: 40px; 
+    }
+
+    .droit .eclair { 
+        width: 100px; 
+    }
+
+    .bar-vie-iron {
+        max-width: 200px;
+        height: 4vh;
+        border: 4px groove rgb(41, 28, 19);
+        padding: 1px 5px;
+    }
+
+    .droit p {
+        font-size: 0.6em;
+        top: 65%;
+        right: 5%;
+    }
+
+    .spider-perso { 
+        width: 140px; 
+        top: 30%; 
+        left: 3%; 
+    }
+
+    .gifPied { 
+        width: 170px; 
+        top: 24%; 
+        left: 3%; 
+    }
+
+    .gifPoing { 
+        width: 145px; 
+        top: 25%; 
+        left: 3%; 
+    }
+
+    .gifToile { 
+        width: 270px; 
+        top: 25%; 
+        left: 1%; 
+    }
+
+    .coup1 { 
+        width: 80px; 
+        top: 14%; 
+        left: 0%; 
+    }
+
+    .iron-perso { 
+        width: 110px; 
+        top: 40%; 
+        left: 62%; 
+    }
+
+    .coup2 { 
+        width: 80px; 
+        top: 14%; 
+        left: 70%; 
+    }
+
+    .ironPoing { 
+        top: 30%; 
+        left: 60%; 
+    }
+
+    .ironPied { 
+        top: 26%; 
+        left: 61%; 
+    }
+
+    .ironToile { 
+        top: 35%; 
+        left: 61%; 
+    }
+
+    .replay {
+        top: 88%;
+        left: 75%;
+        font-size: 0.5em;
+        padding: 0.3em 0.6em;
+    }
+}
