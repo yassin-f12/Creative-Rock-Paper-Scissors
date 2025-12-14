@@ -4,7 +4,7 @@ Un jeu de combat interactif inspiré de l'univers Marvel, mettant en scène **Sp
 
 ## 🎮 Démo en ligne
 
-🔗 **[Jouer maintenant](https://votre-username.github.io/spiderman-vs-ironman-game/)**
+🔗 **[Jouer maintenant](https://yassin-f12.github.io/Creative-Rock-Paper-Scissors/#Pierre%F0%9F%A4%9CFeuille%E2%9C%8BCiseaux%E2%9C%8C%EF%B8%8F:th%C3%A8me_marvels%F0%9F%91%8ASpider_man%F0%9F%86%9AIron_man%F0%9F%92%AA)**
 
 ## ✨ Fonctionnalités
 
@@ -46,6 +46,6 @@ Un jeu de combat interactif inspiré de l'univers Marvel, mettant en scène **Sp
 
 **Yassin**
 
-- GitHub : [@votre-username](https://github.com/votre-username)
+- GitHub : [@yassin-f12](https://github.com/yassin-f12)
 
 ⭐ **Si vous aimez ce projet, n'oubliez pas de lui donner une étoile !** ⭐
